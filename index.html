@@ -2,79 +2,130 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>모바일 최적화 페이지</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manhwa Gallery</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
+      font-family: 'Noto Sans KR', sans-serif;
+      background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+      text-align: center;
+      overflow-x: hidden;
     }
-
-    .button {
+    .main-image {
+      width: 90%;
+      max-width: 500px;
+      margin: 20px auto;
+      display: block;
+    }
+    .btn {
       display: block;
       width: 90%;
       max-width: 400px;
-      margin: 20px auto;
-      padding: 15px;
-      font-size: 1.2rem;
-      text-align: center;
-      background-color: #4CAF50;
+      margin: 15px auto;
+      padding: 18px 0;
+      font-size: 20px;
+      font-weight: bold;
       color: white;
       border: none;
       border-radius: 12px;
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
       cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
-
-    .button:hover {
-      background-color: #45a049;
+    .btn:hover {
+      background: linear-gradient(45deg, #2575fc, #6a11cb);
+      transform: translateY(-2px);
     }
-
     .content, .video-container {
       display: none;
-      margin: 20px auto;
-      padding: 15px;
-      width: 90%;
-      max-width: 600px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      position: relative;
+      padding: 10px;
     }
-
-    img {
-      display: block;
-      width: 90%;
-      max-width: 400px;
+    .content img {
+      width: 100%;
       height: auto;
-      margin: 20px auto;
       border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.2s;
+      margin-bottom: 10px;
     }
-
-    img:active {
-      transform: scale(0.98);
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      font-size: 22px;
+      cursor: pointer;
+      line-height: 36px;
+    }
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 10px;
+    }
+    @media (max-width: 480px) {
+      .btn {
+        font-size: 18px;
+        padding: 16px 0;
+      }
+      iframe {
+        height: 210px;
+      }
     }
   </style>
 </head>
 <body>
 
-<button class="button" onclick="openContent('content1')">내용 열기</button>
-<div id="content1" class="content">
-  여기에 표시될 콘텐츠입니다.
+<img src="https://raw.githubusercontent.com/Yousoo68/fjYxbSA/refs/heads/main/cut_toon.jpg" alt="cut_toon" class="main-image">
+
+<button class="btn" id="newbieBtn">쩔 받고 싶은 뉴비.manhwa</button>
+<button class="btn" id="idolBtn">아이돌을 몰라도 너무 모르는 남고딩.manhwa</button>
+<button class="btn" id="sexyBtn">싱글벙글 패션 그루밍족 섹시유수의 등교 준비.manhwa</button>
+
+<!-- 콘텐츠 영역 -->
+<div id="newbieContent" class="content">
+  <button class="close-btn" onclick="closeContent('newbieContent')">×</button>
+  <img src="https://raw.githubusercontent.com/Yousoo68/fjYxbSA/refs/heads/main/Cbsiwl.jpg" alt="뉴비 이미지">
 </div>
 
-<img id="clickableImage" src="https://via.placeholder.com/400x200" alt="클릭 가능한 이미지">
+<div id="idolContent" class="video-container">
+  <button class="close-btn" onclick="closeContent('idolContent')">×</button>
+  <iframe src="https://www.youtube.com/embed/_btz2VeKpPQ" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div id="sexyContent" class="content">
+  <button class="close-btn" onclick="closeContent('sexyContent')">×</button>
+  <img src="https://i.esdrop.com/d/f/PeFJljKFZ9/Xg1lPdrpMe.jpg" alt="패션그루밍" id="clickableImage">
+  <img src="https://i.esdrop.com/d/f/PeFJljKFZ9/uaoTzL8l4u.jpg" alt="패션그루밍2">
+</div>
 
 <script>
+  const newbieBtn = document.getElementById('newbieBtn');
+  const idolBtn = document.getElementById('idolBtn');
+  const sexyBtn = document.getElementById('sexyBtn');
+
+  newbieBtn.addEventListener('click', () => {
+    openContent('newbieContent');
+  });
+
+  idolBtn.addEventListener('click', () => {
+    openContent('idolContent');
+  });
+
+  sexyBtn.addEventListener('click', () => {
+    openContent('sexyContent');
+  });
+
   function openContent(id) {
     closeAll();
-    const element = document.getElementById(id);
-    element.style.display = 'block';
-    window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
+    document.getElementById(id).style.display = 'block';
+    window.scrollTo({ top: document.getElementById(id).offsetTop - 20, behavior: 'smooth' });
   }
 
   function closeContent(id) {
