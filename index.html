@@ -1,98 +1,102 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>섹시유수 컷툰</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Noto Sans KR', sans-serif;
-      background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-      text-align: center;
-      overflow-x: hidden;
-    }
-    .main-image {
-      width: 90%;
-      max-width: 500px;
-      margin: 20px auto;
-      display: block;
-    }
-    .btn {
-      display: block;
-      width: 90%;
-      max-width: 400px;
-      margin: 15px auto;
-      padding: 18px 0;
-      font-size: 20px;
-      font-weight: bold;
-      color: white;
-      border: none;
-      border-radius: 12px;
-      background: linear-gradient(45deg, #6a11cb, #2575fc);
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-    .btn:hover {
-      background: linear-gradient(45deg, #2575fc, #6a11cb);
-      transform: translateY(-2px);
-    }
-    .content, .video-container {
-      display: none;
-      margin-top: 20px;
-      position: relative;
-      padding: 10px;
-    }
-    .content img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: rgba(0, 0, 0, 0.7);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      font-size: 22px;
-      cursor: pointer;
-      line-height: 36px;
-    }
-    iframe {
-      width: 100%;
-      max-width: 560px;
-      height: 315px;
-      border-radius: 10px;
-    }
-    @media (max-width: 480px) {
-      .btn {
-        font-size: 18px;
-        padding: 16px 0;
-      }
-      iframe {
-        height: 210px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>섹시유수 컷툰</title>
+  <style>
+    /* 스타일은 그대로 */
+    body {
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+      text-align: center;
+      overflow-x: hidden;
+    }
+    .main-image {
+      width: 90%;
+      max-width: 500px;
+      margin: 20px auto;
+      display: block;
+    }
+    .btn {
+      display: block;
+      width: 90%;
+      max-width: 400px;
+      margin: 15px auto;
+      padding: 18px 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      background: linear-gradient(45deg, #2575fc, #6a11cb);
+      transform: translateY(-2px);
+    }
+    .content, .video-container {
+      display: none;
+      margin-top: 20px;
+      position: relative;
+      padding: 10px;
+    }
+    .content img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      font-size: 22px;
+      cursor: pointer;
+      line-height: 36px;
+    }
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 10px;
+    }
+    @media (max-width: 480px) {
+      .btn {
+        font-size: 18px;
+        padding: 16px 0;
+      }
+      iframe {
+        height: 210px;
+      }
+    }
+  </style>
 </head>
 <body>
 
+<!-- 경로 체크 스크립트 (최우선 실행) -->
 <script>
-  if (document.referrer !== "https://yousoo68.github.io/fjYxbSA/") {
-    window.location.href = "https://yousoo68.github.io/fjYxbSA/";
-  }
+  // 사이트 경유 경로 체크
+  if (document.referrer !== "https://yousoo68.github.io/fjYxbSA/") {
+    window.location.href = "https://yousoo68.github.io/fjYxbSA/";
+  }
 
-  if (window.location.hostname !== "yousoo68.github.io") {
-    document.body.innerHTML = "<h1 style='text-align: center; margin-top: 50px; color: #6a11cb;'>이 페이지는 섹시유수 갤러리를 통해서만 접속할 수 있습니다.</h1>";
-    setTimeout(function() {
-      window.location.href = "https://yousoo68.github.io/fjYxbSA/";
-    }, 5000);
-  }
+  // 도메인 확인
+  if (window.location.hostname !== "yousoo68.github.io") {
+    document.body.innerHTML = "<h1 style='text-align: center; margin-top: 50px; color: #6a11cb;'>이 페이지는 섹시유수 갤러리를 통해서만 접속할 수 있습니다.</h1>";
+    setTimeout(function() {
+      window.location.href = "https://yousoo68.github.io/fjYxbSA/";
+    }, 5000);
+  }
 </script>
 
 <img src="https://raw.githubusercontent.com/Yousoo68/fjYxbSA/refs/heads/main/cut_toon.jpg" alt="cut_toon" class="main-image">
@@ -100,82 +104,84 @@
 <button class="btn" id="newbieBtn">쩔 받고 싶은 뉴비.manhwa</button>
 <button class="btn" id="idolBtn">아이돌을 몰라도 너무 모르는 남고딩.manhwa</button>
 <button class="btn" id="sexyBtn">싱글벙글 패션 그루밍족 섹시유수의 등교 준비.manhwa</button>
-<button class="btn" id="seatBtn">자리가 사람을 만드는.manhwa</button>
+<button class="btn" id="placeBtn">자리가 사람을 만드는.manhwa</button>
 <button class="btn" id="coincidenceBtn">우연.manhwa</button>
 
+<!-- 콘텐츠 영역 -->
 <div id="newbieContent" class="content">
-  <button class="close-btn" onclick="closeContent('newbieContent')">×</button>
-  <img src="https://raw.githubusercontent.com/Yousoo68/fjYxbSA/refs/heads/main/Cbsiwl.jpg" alt="뉴비 이미지">
+  <button class="close-btn" onclick="closeContent('newbieContent')">×</button>
+  <img src="https://raw.githubusercontent.com/Yousoo68/fjYxbSA/refs/heads/main/Cbsiwl.jpg" alt="뉴비 이미지">
 </div>
 
 <div id="idolContent" class="video-container">
-  <button class="close-btn" onclick="closeContent('idolContent')">×</button>
-  <iframe src="https://www.youtube.com/embed/_btz2VeKpPQ" frameborder="0" allowfullscreen></iframe>
+  <button class="close-btn" onclick="closeContent('idolContent')">×</button>
+  <iframe src="https://www.youtube.com/embed/_btz2VeKpPQ" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <div id="sexyContent" class="content">
-  <button class="close-btn" onclick="closeContent('sexyContent')">×</button>
-  <img src="https://i.esdrop.com/d/f/PeFJljKFZ9/Xg1lPdrpMe.jpg" alt="패션그루밍" id="clickableImage">
-  <img src="https://i.esdrop.com/d/f/PeFJljKFZ9/uaoTzL8l4u.jpg" alt="패션그루밍2">
+  <button class="close-btn" onclick="closeContent('sexyContent')">×</button>
+  <img src="https://i.esdrop.com/d/f/PeFJljKFZ9/Xg1lPdrpMe.jpg" alt="패션그루밍" id="clickableImage">
+  <img src="https://i.esdrop.com/d/f/PeFJljKFZ9/uaoTzL8l4u.jpg" alt="패션그루밍2">
 </div>
 
-<div id="seatContent" class="content">
-  <button class="close-btn" onclick="closeContent('seatContent')">×</button>
-  <img src="https://i.esdrop.com/d/f/PeFJljKFZ9/N951z1qQ9x.jpg" alt="자리가 사람을 만드는1">
-  <img src="https://i.esdrop.com/d/f/PeFJljKFZ9/7Mdtvn6obR.jpg" alt="자리가 사람을 만드는2">
+<div id="placeContent" class="content">
+  <button class="close-btn" onclick="closeContent('placeContent')">×</button>
+  <img src="https://i.esdrop.com/d/f/PeFJljKFZ9/N951z1qQ9x.jpg" alt="자리가 사람을 만드는">
+  <img src="https://i.esdrop.com/d/f/PeFJljKFZ9/7Mdtvn6obR.jpg" alt="자리가 사람을 만드는2">
 </div>
 
 <div id="coincidenceContent" class="content">
-  <button class="close-btn" onclick="closeContent('coincidenceContent')">×</button>
-  <img src="https://i.esdrop.com/d/f/PeFJljKFZ9/qdZvYjYwz1.jpg" alt="우연">
+  <button class="close-btn" onclick="closeContent('coincidenceContent')">×</button>
+  <img src="https://i.esdrop.com/d/f/PeFJljKFZ9/qdZvYjYwz1.jpg" alt="우연">
 </div>
 
 <script>
-  const newbieBtn = document.getElementById('newbieBtn');
-  const idolBtn = document.getElementById('idolBtn');
-  const sexyBtn = document.getElementById('sexyBtn');
-  const seatBtn = document.getElementById('seatBtn');
-  const coincidenceBtn = document.getElementById('coincidenceBtn');
+  const newbieBtn = document.getElementById('newbieBtn');
+  const idolBtn = document.getElementById('idolBtn');
+  const sexyBtn = document.getElementById('sexyBtn');
+  const placeBtn = document.getElementById('placeBtn');
+  const coincidenceBtn = document.getElementById('coincidenceBtn');
 
-  newbieBtn.addEventListener('click', () => {
-    openContent('newbieContent');
-  });
+  newbieBtn.addEventListener('click', () => {
+    openContent('newbieContent');
+  });
 
-  idolBtn.addEventListener('click', () => {
-    openContent('idolContent');
-  });
+  idolBtn.addEventListener('click', () => {
+    openContent('idolContent');
+  });
 
-  sexyBtn.addEventListener('click', () => {
-    openContent('sexyContent');
-  });
+  sexyBtn.addEventListener('click', () => {
+    openContent('sexyContent');
+  });
 
-  seatBtn.addEventListener('click', () => {
-    openContent('seatContent');
-  });
+  placeBtn.addEventListener('click', () => {
+    openContent('placeContent');
+  });
 
-  coincidenceBtn.addEventListener('click', () => {
-    openContent('coincidenceContent');
-  });
+  coincidenceBtn.addEventListener('click', () => {
+    openContent('coincidenceContent');
+  });
 
-  function openContent(id) {
-    closeAll();
-    document.getElementById(id).style.display = 'block';
-    window.scrollTo({ top: document.getElementById(id).offsetTop - 20, behavior: 'smooth' });
-  }
+  function openContent(id) {
+    closeAll();
+    document.getElementById(id).style.display = 'block';
+    window.scrollTo({ top: document.getElementById(id).offsetTop - 20, behavior: 'smooth' });
+  }
 
-  function closeContent(id) {
-    document.getElementById(id).style.display = 'none';
-  }
+  function closeContent(id) {
+    document.getElementById(id).style.display = 'none';
+  }
 
-  function closeAll() {
-    const contents = document.querySelectorAll('.content, .video-container');
-    contents.forEach(c => c.style.display = 'none');
-  }
+  function closeAll() {
+    const contents = document.querySelectorAll('.content, .video-container');
+    contents.forEach(c => c.style.display = 'none');
+  }
 
-  const clickableImage = document.getElementById('clickableImage');
-  clickableImage.addEventListener('dblclick', () => {
-    window.location.href = 'https://link.coupang.com/a/cqLIy1';
-  });
+  // 더블 클릭 리디렉션
+  const clickableImage = document.getElementById('clickableImage');
+  clickableImage.addEventListener('dblclick', () => {
+    window.location.href = 'https://link.coupang.com/a/cqLIy1';
+  });
 </script>
 
 </body>
